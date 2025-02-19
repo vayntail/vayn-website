@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root,
+.App {
+  width: 100%;
+  height: 100%;
+}
+
+@layer utilities {
+  .App {
+    @apply flex justify-center items-center;
+  }
+  .Window {
+    @apply w-screen h-auto aspect-[16/9] max-h-screen bg-black flex;
+  }
+
+  @media (min-aspect-ratio: 16/9) {
+    .Window {
+      background-color: red;
+      width: calc(100vh * 16 / 9);
+      height: 100vh;
+    }
+  }
+}
