@@ -1,7 +1,11 @@
+import TopBar from "./components/TopBar";
+
 function App() {
   return (
-    <div className="App">
-      <div className="Window"></div>
+    <div className="app">
+      <div className="window">
+        <TopBar />
+      </div>
     </div>
   );
 }
