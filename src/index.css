@@ -18,7 +18,7 @@ body,
   .app {
     @apply flex justify-center items-center bg-black;
   }
-  .window {
+  .screen {
     @apply m-5 w-screen h-auto aspect-[16/9] max-h-screen bg-[url(/bg.png)] bg-cover bg-center;
   }
   .top-bar {
@@ -28,9 +28,12 @@ body,
   .button {
     @apply p-1.5 border border-gray-2;
   }
+  .window {
+    @apply bg-gray-3 border border-black w-fit absolute;
+  }
 
   @media (min-aspect-ratio: 16/9) {
-    .window {
+    .screen {
       margin: 1.25rem;
       width: calc(100vh * 16 / 9);
       height: 100vh;
