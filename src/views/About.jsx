@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 
 const About = () => {
   return (
     <div>
-      <img className="w-64" src="/pfp.JPG"/>
+      <img className="w-[100%]" src="/pfp.JPG" />
       <p>name: Yoon / Vayn</p>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
