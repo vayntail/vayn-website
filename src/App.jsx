@@ -1,8 +1,4 @@
-import TopBar from "./components/TopBar";
-import About from "./views/About";
-import Window from "./components/Window";
 import HomeButton from "./components/HomeButton";
-import Art from "./views/aRT.JSX";
 
 // function App() {
 //   return (
