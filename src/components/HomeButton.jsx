@@ -2,9 +2,9 @@ import React from "react";
 
 const HomeButton = (props) => {
   return (
-    <div className="text-center w-[5%] cursor-pointer">
-      <img className="w-[100%]" src={props.url} />
-      <p>{props.title}</p>
+    <div className="HomeButton text-center cursor-pointer">
+      <img className="w-full" src={props.url} />
+      <p className="text-white">{props.title}</p>
     </div>
   );
 };
