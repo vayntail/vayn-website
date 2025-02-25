@@ -55,4 +55,8 @@ body,
     font-size: calc(1vw + 1vh);
     background: url(/bg.png) center / cover no-repeat;
   }
+
+  .HomeButton {
+    width: 20%;
+  }
 }
