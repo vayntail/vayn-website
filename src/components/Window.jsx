@@ -32,7 +32,7 @@ const Window = (props) => {
   return (
     <div
       ref={windowRef}
-      className="window p-1.5"
+      className="Window p-1.5"
       style={{
         top: position.y,
         left: position.x,

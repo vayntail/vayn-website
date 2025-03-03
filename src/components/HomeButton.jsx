@@ -1,5 +1,3 @@
-import React from "react";
-
 const HomeButton = (props) => {
   return (
     <div className="HomeButton text-center cursor-pointer">
