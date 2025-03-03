@@ -34,7 +34,7 @@ const Window = (props) => {
       ref={windowRef}
       className="Window p-1.5"
       style={{
-        top: position.y,
+        top: position.y, // change to percentage later.
         left: position.x,
         width: props.width,
       }}

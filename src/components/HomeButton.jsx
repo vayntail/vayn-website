@@ -1,8 +1,8 @@
-const HomeButton = (props) => {
+const HomeButton = ({ title, url, onToggle }) => {
   return (
-    <div className="HomeButton text-center cursor-pointer">
-      <img className="w-full" src={props.url} />
-      <p className="text-black">{props.title}</p>
+    <div onClick={onToggle} className="HomeButton text-center cursor-pointer">
+      <img className="w-full" src={url} />
+      <p className="text-black">{title}</p>
     </div>
   );
 };
