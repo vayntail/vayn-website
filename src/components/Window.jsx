@@ -46,7 +46,7 @@ const Window = (props) => {
       >
         {props.title}
         <button onClick={props.onClose} className="border border-black">
-          x
+          <img className="" src="/icons/xmark.svg" />
         </button>
       </div>
       {/* content */}
