@@ -1,33 +1,35 @@
 import Nav from "./components/Nav";
-import Window from "./components/Window";
 import About from "./views/About";
 import Art from "./views/Art";
-import { useState } from "react";
+import { useWindow } from "./context/WindowContext";
+import Window from "./components/Window";
 
 const App = () => {
-  const [windowState, setWindowState] = useState({
-    about: false,
-    art: false,
-    code: false,
-  });
-
-  // navigation button toggles
-  const onToggle = (window) => {
-    setWindowState((prevState) => ({
-      ...prevState,
-      [window]: !prevState[window], // toggle the state
-    }));
-  };
+  const { windows, toggleWindow, closeWindow } = useWindow();
 
   return (
     <div className="scaling-container">
       <div className="screen">
-        <Nav onToggle={onToggle} />
-        {windowState.about && (
-          <Window title={"about-me.png"} view={<About />} width={"20%"} />
+        <Nav />
+        {windows.about && (
+          <Window
+            title={"about-me.png"}
+            view={<About />}
+            width={"80%"}
+            onClose={() => {
+              closeWindow("about");
+            }}
+          />
         )}
-        {windowState.art && (
-          <Window title={"my art"} view={<Art />} width={"80%"} />
+        {windows.art && (
+          <Window
+            title={"my art"}
+            view={<Art />}
+            width={"80%"}
+            onClose={() => {
+              closeWindow("art");
+            }}
+          />
         )}
       </div>
     </div>

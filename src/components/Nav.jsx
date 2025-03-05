@@ -1,19 +1,17 @@
 import HomeButton from "./HomeButton";
+import { useWindow } from "../context/windowContext";
 
-const Nav = ({ onToggle }) => {
-  const buttons = [
-    { name: "about", title: "about me", icon: "/icons/text_editor.png" },
-    { name: "code", title: "code", icon: "/icons/github.png" },
-    { name: "art", title: "art", icon: "/icons/paint_alt.png" },
-  ];
+const Nav = () => {
+  const { windowsArr, toggleWindow } = useWindow();
+
   return (
     <div className="Nav">
-      {buttons.map((button) => (
+      {windowsArr.map((window) => (
         <HomeButton
-          key={button.name}
-          title={button.title}
-          url={button.icon}
-          onToggle={() => onToggle(button.name)}
+          key={window.name}
+          title={window.navTitle}
+          url={window.navIcon}
+          onToggle={() => toggleWindow(window.name)}
         />
       ))}
     </div>

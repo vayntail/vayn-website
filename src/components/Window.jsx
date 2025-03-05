@@ -32,7 +32,7 @@ const Window = (props) => {
   return (
     <div
       ref={windowRef}
-      className="Window p-1.5"
+      className="Window p-1.5 absolute bg-gray-200"
       style={{
         top: position.y, // change to percentage later.
         left: position.x,
@@ -41,11 +41,13 @@ const Window = (props) => {
     >
       {/* top bar */}
       <div
-        className="bg-[#DDC9C9] pl-3 mb-2 flex justify-between"
+        className="bg-[#DDC9C9] pl-3 flex justify-between"
         onMouseDown={handleMouseDown}
       >
         {props.title}
-        <button className="border border-black">x</button>
+        <button onClick={props.onClose} className="border border-black">
+          x
+        </button>
       </div>
       {/* content */}
       {props.view}
