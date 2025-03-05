@@ -1,7 +1,7 @@
 import Nav from "./components/Nav";
 import About from "./views/About";
 import Art from "./views/Art";
-import { useWindow } from "./context/windowContext";
+import { useWindow } from "./context/WindowContext.jsx";
 import Window from "./components/Window";
 
 const App = () => {

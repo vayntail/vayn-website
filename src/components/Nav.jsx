@@ -1,5 +1,5 @@
 import HomeButton from "./HomeButton";
-import { useWindow } from "../context/windowContext";
+import { useWindow } from "../context/WindowContext.jsx";
 
 const Nav = () => {
   const { windowsArr, toggleWindow } = useWindow();
