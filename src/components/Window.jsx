@@ -32,21 +32,22 @@ const Window = (props) => {
   return (
     <div
       ref={windowRef}
-      className="Window p-1.5 absolute bg-gray-200"
+      className="Window p-1.5 absolute bg-gray-200 flex flex-col"
       style={{
         top: position.y, // change to percentage later.
         left: position.x,
         width: props.width,
+        height: props.height,
       }}
     >
       {/* top bar */}
       <div
-        className="bg-[#DDC9C9] pl-3 flex justify-between"
+        className="bg-[#DDC9C9] pl-3 flex justify-between h-fit"
         onMouseDown={handleMouseDown}
       >
         {props.title}
         <button onClick={props.onClose} className="border border-black">
-          <img className="" src="/icons/xmark.svg" />
+          <img className="h-full" src="/icons/xmark.svg" />
         </button>
       </div>
       {/* content */}

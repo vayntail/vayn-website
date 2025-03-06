@@ -1,7 +1,7 @@
 const About = () => {
   return (
-    <div>
-      <img className="w-[100%]" src="/pfp.JPG" />
+    <div className="flex-1 overflow-auto">
+      <img className="h-full object-contain" src="/pfp.JPG" />
       <p>name: Yoon / Vayn</p>
     </div>
   );

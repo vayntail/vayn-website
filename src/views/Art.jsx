@@ -1,5 +1,5 @@
 import { useState } from "react";
-import BreadcrumbNav from "../components/art/BreadcrumbNav";
+import BreadcrumbNav from "../components/Art/BreadcrumbNav";
 
 const Art = () => {
   const [openFolder, setOpenFolder] = useState();

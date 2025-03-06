@@ -1,4 +1,4 @@
-import { useState, createContext, useContext } from "react";
+import { useState, createContext, useContext, useEffect } from "react";
 
 // create context
 const WindowContext = createContext();
@@ -10,6 +10,7 @@ export const WindowProvider = ({ children }) => {
     code: false,
     art: false,
   });
+  const [scale, setScale] = useState(1);
 
   // list of windows
   const windowsArr = [
@@ -17,22 +18,16 @@ export const WindowProvider = ({ children }) => {
       name: "about",
       navTitle: "about",
       navIcon: "/icons/text_editor.png",
-      pcWidth: "20%",
-      mobileWidth: "40%",
     },
     {
       name: "code",
       navTitle: "code",
       navIcon: "/icons/github.png",
-      pcWidth: "20%",
-      mobileWidth: "40%",
     },
     {
       name: "art",
       navTitle: "art",
       navIcon: "/icons/paint_alt.png",
-      pcWidth: "20%",
-      mobileWidth: "40%",
     },
   ];
 
